@@ -51,7 +51,7 @@ public class InventoryClickListener implements Listener {
                     player.sendMessage(Plugin.PREFIX + "§aYou activated the whitelist!");
                     break;
 
-                case SKELETON_SKULL:
+                case PLAYER_HEAD:
                     player.performCommand("whitelistguiplayers");
                     break;
 
@@ -65,11 +65,13 @@ public class InventoryClickListener implements Listener {
 
         // Whitelist Second GUI
         if (event.getView().getTitle().equalsIgnoreCase("§7Whitelisted Players")) {
+            event.setCancelled(true);
             switch (event.getCurrentItem().getType()) {
-                case SKELETON_SKULL:
+                case PLAYER_HEAD:
                     if (event.isRightClick()) {
                         player.performCommand("whitelist remove " + event.getCurrentItem().getItemMeta().getDisplayName());
                         player.sendMessage(Plugin.PREFIX + "§eYou unwhitelisted §b" + event.getCurrentItem().getItemMeta().getDisplayName() + "§e!");
+                        player.performCommand("kick " + event.getView().getTitle());
                         player.closeInventory();
                     }
                     break;

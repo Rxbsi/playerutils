@@ -30,7 +30,7 @@ public class WhitelistGuiPlayersCommand implements CommandExecutor {
                 Inventory whitelistguiplayers = Bukkit.createInventory(player, 54, "§7Whitelisted Players");
 
                 for (OfflinePlayer all : Bukkit.getWhitelistedPlayers()) {
-                    ItemStack listedPlayer = new ItemStack(Material.SKELETON_SKULL);
+                    ItemStack listedPlayer = new ItemStack(Material.PLAYER_HEAD);
                     ItemMeta listedPlayerMeta = listedPlayer.getItemMeta();
                     listedPlayerMeta.setDisplayName(all.getName());
                     List<String> playerLore = new ArrayList<String>();

@@ -30,7 +30,7 @@ public class WhitelistGuiCommand implements CommandExecutor {
                 emeraldBlockMeta.setDisplayName("§a§lActivate Whitelist");
                 emeraldBlock.setItemMeta(emeraldBlockMeta);
 
-                ItemStack skull = new ItemStack(Material.SKELETON_SKULL);
+                ItemStack skull = new ItemStack(Material.PLAYER_HEAD);
                 ItemMeta skullMeta = skull.getItemMeta();
                 skullMeta.setDisplayName("§bWhitelisted Players");
                 skull.setItemMeta(skullMeta);
