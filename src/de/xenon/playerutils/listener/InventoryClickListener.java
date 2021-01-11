@@ -1,6 +1,7 @@
 package de.xenon.playerutils.listener;
 
 import de.xenon.playerutils.Plugin;
+import de.xenon.playerutils.commands.UtilsCommand;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -119,6 +120,24 @@ public class InventoryClickListener implements Listener {
                 }
             }
         }
+
+        // CHAT-EVENT GUI
+        if(event.getView().getTitle().equalsIgnoreCase("§6Chat§7-§6Events")) {
+            event.setCancelled(true);
+            switch (event.getCurrentItem().getType()) {
+                case FIRE_CHARGE:
+                    player.performCommand("cc");
+                    break;
+                case BARRIER:
+                    player.performCommand("cl");
+                    break;
+                case IRON_DOOR:
+                    player.closeInventory();
+                    player.openInventory(UtilsCommand.worldInventory);
+                    break;
+            }
+        }
+
 
     }
 
