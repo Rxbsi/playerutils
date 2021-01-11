@@ -37,7 +37,7 @@ public class ChateventCommand implements CommandExecutor {
                 ItemMeta clMeta = cl.getItemMeta();
                 clMeta.setDisplayName("§bChat§7-§bLock");
                 List<String> clLore = new ArrayList<String>();
-                clLore.add("§e(Ent)-Blockiert den Chat)");
+                clLore.add("§e(Ent)-Blockiert den Chat");
                 clMeta.setLore(clLore);
                 cl.setItemMeta(clMeta);
 
@@ -50,8 +50,8 @@ public class ChateventCommand implements CommandExecutor {
                 exit.setItemMeta(exitMeta);
 
                 inventory.setItem(2, cc);
-                inventory.setItem(4, cc);
-                inventory.setItem(7, cc);
+                inventory.setItem(4, cl);
+                inventory.setItem(7, exit);
 
                 player.openInventory(inventory);
 

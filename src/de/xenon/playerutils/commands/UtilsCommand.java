@@ -43,7 +43,7 @@ public class UtilsCommand implements CommandExecutor {
                 ItemMeta barrierMeta = barrier.getItemMeta();
                 barrierMeta.setDisplayName("§bChat§7-§bEvents");
                 List<String> barrierLore = new ArrayList<String>();
-                barrierLore.add("§eLässt dich den Chat clearen");
+                barrierLore.add("§eVerschiedene Funktionen für den Chat");
                 barrierMeta.setLore(barrierLore);
                 barrier.setItemMeta(barrierMeta);
 

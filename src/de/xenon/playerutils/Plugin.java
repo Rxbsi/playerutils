@@ -24,7 +24,7 @@ public class Plugin extends JavaPlugin {
         this.getCommand("whitelistgui").setExecutor(new WhitelistGuiCommand());
         this.getCommand("whitelistguiplayers").setExecutor(new WhitelistGuiPlayersCommand());
         this.getCommand("workbench").setExecutor(new WorkbenchCommand());
-        this.getCommand("chatevent").setExecutor(new ChateventCommand());
+        this.getCommand("chatevents").setExecutor(new ChateventCommand());
         this.getCommand("cc").setExecutor(new ChatClearCommand());
     }
 
