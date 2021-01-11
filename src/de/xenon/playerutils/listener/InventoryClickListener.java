@@ -1,6 +1,8 @@
 package de.xenon.playerutils.listener;
 
+import com.sun.istack.internal.NotNull;
 import de.xenon.playerutils.Plugin;
+import de.xenon.playerutils.commands.ChateventCommand;
 import de.xenon.playerutils.commands.UtilsCommand;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -29,7 +31,7 @@ public class InventoryClickListener implements Listener {
                     break;
 
                 case CLOCK:
-                    player.performCommand("daytime");
+                    player.performCommand("daytimegui");
                     break;
 
                 case PAPER:
@@ -116,6 +118,9 @@ public class InventoryClickListener implements Listener {
                     case TNT:
                         player.performCommand("troll " + event.getView().getTitle());
                         break;
+                    case IRON_DOOR:
+                        player.closeInventory();
+                        break;
 
                 }
             }
@@ -129,7 +134,41 @@ public class InventoryClickListener implements Listener {
                     player.performCommand("cc");
                     break;
                 case BARRIER:
-                    player.performCommand("cl");
+                    player.performCommand("clgui");
+                    break;
+                case IRON_DOOR:
+                    player.closeInventory();
+                    player.openInventory(UtilsCommand.worldInventory);
+                    break;
+            }
+        }
+
+        // CHAT-LOCK GUI
+        if(event.getView().getTitle().equalsIgnoreCase("§6Chat§7-§6Lock")) {
+            event.setCancelled(true);
+            switch (event.getCurrentItem().getType()) {
+                case EMERALD_BLOCK:
+                    player.performCommand("cl unlock");
+                    break;
+                case REDSTONE_BLOCK:
+                    player.performCommand("cl lock");
+                    break;
+                case IRON_DOOR:
+                    player.closeInventory();
+                    player.openInventory(ChateventCommand.chatINV);
+                    break;
+            }
+        }
+
+        // TIME GUI
+        if(event.getView().getTitle().equalsIgnoreCase("§6Time§7-§6Managment")) {
+            event.setCancelled(true);
+            switch (event.getCurrentItem().getType()) {
+                case SUNFLOWER:
+                    player.performCommand("time set day");
+                    break;
+                case CAMPFIRE:
+                    player.performCommand("time set night");
                     break;
                 case IRON_DOOR:
                     player.closeInventory();

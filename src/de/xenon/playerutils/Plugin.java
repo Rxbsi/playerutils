@@ -1,6 +1,7 @@
 package de.xenon.playerutils;
 
 import de.xenon.playerutils.commands.*;
+import de.xenon.playerutils.listener.AsyncPlayerChatListener;
 import de.xenon.playerutils.listener.InventoryClickListener;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -26,10 +27,15 @@ public class Plugin extends JavaPlugin {
         this.getCommand("workbench").setExecutor(new WorkbenchCommand());
         this.getCommand("chatevents").setExecutor(new ChateventCommand());
         this.getCommand("cc").setExecutor(new ChatClearCommand());
+        this.getCommand("cl").setExecutor(new ChatlockCommand());
+        this.getCommand("clgui").setExecutor(new ChatlockGuiCommand());
+        this.getCommand("daytimegui").setExecutor(new DaytimeGuiCommand());
     }
 
     private void registerListener() {
+
         Bukkit.getPluginManager().registerEvents(new InventoryClickListener(), this);
+        Bukkit.getPluginManager().registerEvents(new AsyncPlayerChatListener(), this);
     }
 
     public static Plugin getPlugin() {
