@@ -9,6 +9,7 @@ commands:
   chatevents:
   daytime:
   whitelistgui:
+  whitelistguiplayers:
   health:
   gm:
   bannkick:
