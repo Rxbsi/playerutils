@@ -1,5 +1,6 @@
 package de.xenon.playerutils;
 
+import de.xenon.playerutils.commands.PlayerCommand;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -18,6 +19,7 @@ public class Plugin extends JavaPlugin {
     }
 
     private void registerCommand() {
+        this.getCommand("player").setExecutor(new PlayerCommand());
     }
 
     private void registerListener() {
