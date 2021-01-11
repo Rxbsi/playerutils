@@ -9,7 +9,8 @@ commands:
   chatevents:
   cc:
   cl:
-  daytime:
+  clgui:
+  daytimegui:
   whitelistgui:
   whitelistguiplayers:
   health:

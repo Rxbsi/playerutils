@@ -1,5 +1,6 @@
 package de.xenon.playerutils.commands;
 
+import de.xenon.playerutils.Plugin;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
@@ -13,34 +14,33 @@ import org.bukkit.inventory.meta.ItemMeta;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ChateventCommand implements CommandExecutor {
-
-    public static Inventory chatINV;
+public class DaytimeGuiCommand implements CommandExecutor {
 
     @Override
-    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+    public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 
-        if(!(sender instanceof Player))
+        if (!(sender instanceof Player))
             return false;
+
         final Player player = (Player) sender;
 
-        if(player.hasPermission("utils.chatevent") || player.hasPermission("utils.*")) {
-            if(args.length == 0) {
-                 chatINV = Bukkit.createInventory(player, 9, "§6Chat§7-§6Events");
+        if (player.hasPermission("utils.time") || player.hasPermission("utils.*")) {
+            if (args.length == 0) {
+                Inventory inventory = Bukkit.createInventory(player, 9, "§6Time§7-§6Managment");
 
-                ItemStack cc = new ItemStack(Material.FIRE_CHARGE);
+                ItemStack cc = new ItemStack(Material.SUNFLOWER);
                 ItemMeta ccMeta = cc.getItemMeta();
-                ccMeta.setDisplayName("§bChat§7-§bClear");
+                ccMeta.setDisplayName("§bTime§7-§bDay");
                 List<String> ccLore = new ArrayList<String>();
-                ccLore.add("§eLöscht den Chat");
+                ccLore.add("§eSetzte die Zeit auf \"Tag\"");
                 ccMeta.setLore(ccLore);
                 cc.setItemMeta(ccMeta);
 
-                ItemStack cl = new ItemStack(Material.BARRIER);
+                ItemStack cl = new ItemStack(Material.CAMPFIRE);
                 ItemMeta clMeta = cl.getItemMeta();
-                clMeta.setDisplayName("§bChat§7-§bLock");
+                clMeta.setDisplayName("§bTime§7-§bNight");
                 List<String> clLore = new ArrayList<String>();
-                clLore.add("§e(Ent)-Blockiert den Chat");
+                clLore.add("§eSetzte die Zeit auf \"Nacht\"");
                 clMeta.setLore(clLore);
                 cl.setItemMeta(clMeta);
 
@@ -52,15 +52,15 @@ public class ChateventCommand implements CommandExecutor {
                 exitMeta.setLore(exitLore);
                 exit.setItemMeta(exitMeta);
 
-                chatINV.setItem(2, cc);
-                chatINV.setItem(4, cl);
-                chatINV.setItem(7, exit);
+                inventory.setItem(2, cc);
+                inventory.setItem(4, cl);
+                inventory.setItem(7, exit);
 
-                player.openInventory(chatINV);
+                player.openInventory(inventory);
 
             }
-
         }
         return false;
     }
+
 }

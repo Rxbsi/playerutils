@@ -82,7 +82,7 @@ public class UtilsCommand implements CommandExecutor {
             } else if (args.length == 1) {
                 final Player target = Bukkit.getPlayerExact(args[0]);
                 if (target != null) {
-                    Inventory playerInventory = Bukkit.createInventory(player, 18, target.getDisplayName());
+                    Inventory playerInventory = Bukkit.createInventory(player, 27, target.getDisplayName());
 
                     ItemStack skull = new ItemStack(Material.SKELETON_SKULL);
                     ItemMeta skullMeta = skull.getItemMeta();
@@ -172,6 +172,14 @@ public class UtilsCommand implements CommandExecutor {
                     tntMeta.setLore(tntLore);
                     tnt.setItemMeta(tntMeta);
 
+                    ItemStack exit = new ItemStack(Material.IRON_DOOR);
+                    ItemMeta exitMeta = exit.getItemMeta();
+                    exitMeta.setDisplayName("§cExit");
+                    List<String> exitLore = new ArrayList<String>();
+                    exitLore.add("§eKehre in das vorherige GUI zurück!");
+                    exitMeta.setLore(exitLore);
+                    exit.setItemMeta(exitMeta);
+
                     playerInventory.setItem(0, glassPane);
                     playerInventory.setItem(1, glassPane);
                     playerInventory.setItem(2, glassPane);
@@ -190,6 +198,15 @@ public class UtilsCommand implements CommandExecutor {
                     playerInventory.setItem(15, feather);
                     playerInventory.setItem(16, enderpearl);
                     playerInventory.setItem(17, tnt);
+                    playerInventory.setItem(18, glassPane);
+                    playerInventory.setItem(19, glassPane);
+                    playerInventory.setItem(20, glassPane);
+                    playerInventory.setItem(21, glassPane);
+                    playerInventory.setItem(22, exit);
+                    playerInventory.setItem(23, glassPane);
+                    playerInventory.setItem(24, glassPane);
+                    playerInventory.setItem(25, glassPane);
+                    playerInventory.setItem(26, glassPane);
 
                     player.openInventory(playerInventory);
 
