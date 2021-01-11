@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="PlayerUtils" />
       <artifact name="PlayerUtils1" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1bbdcf2-8e54-44b1-b507-8bd1d6f48c72" name="Default Changelist" comment="&quot;second commit&quot;">
-      <change beforePath="$PROJECT_DIR$/src/de/xenon/playerutils/commands/WorkbenchCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/xenon/playerutils/commands/WorkbenchCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +33,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GithubProjectSettings">
-    <option name="CREATE_PULL_REQUEST_DEFAULT_BRANCH" value="verronix" />
+    <option name="CREATE_PULL_REQUEST_DEFAULT_BRANCH" value="main" />
     <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_USER" value="Rxbsi" />
     <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_NAME" value="playerutils" />
   </component>
@@ -96,7 +95,7 @@
       <option name="presentableId" value="Default" />
       <updated>1610372477006</updated>
       <workItem from="1610372479108" duration="2402000" />
-      <workItem from="1610380227300" duration="3784000" />
+      <workItem from="1610380227300" duration="4554000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;second commit&quot;">
       <created>1610373439054</created>
@@ -182,7 +181,21 @@
       <option name="project" value="LOCAL" />
       <updated>1610386795775</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="&quot;second commit&quot;">
+      <created>1610387089317</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1610387089317</updated>
+    </task>
+    <task id="LOCAL-00014" summary="&quot;second commit&quot;">
+      <created>1610387260311</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1610387260311</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
