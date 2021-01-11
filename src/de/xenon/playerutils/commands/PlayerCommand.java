@@ -11,12 +11,12 @@ public class PlayerCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 
-        if(!(sender instanceof Player))
+        if (!(sender instanceof Player))
             return false;
 
         final Player player = (Player) sender;
 
-        if(player.hasPermission("playerutils.player") || player.hasPermission("playerutils.*")) {
+        if (player.hasPermission("playerutils.player") || player.hasPermission("playerutils.*")) {
             player.sendMessage(Plugin.PREFIX + "Nigger");
         }
 
