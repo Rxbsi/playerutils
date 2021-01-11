@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e1bbdcf2-8e54-44b1-b507-8bd1d6f48c72" name="Default Changelist" comment="" />
+    <list default="true" id="e1bbdcf2-8e54-44b1-b507-8bd1d6f48c72" name="Default Changelist" comment="&quot;second commit&quot;">
+      <change beforePath="$PROJECT_DIR$/src/de/xenon/playerutils/commands/PlayerCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/xenon/playerutils/commands/PlayerCommand.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,6 +18,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubProjectSettings">
+    <option name="CREATE_PULL_REQUEST_DEFAULT_BRANCH" value="main" />
+    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_USER" value="Rxbsi" />
+    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_NAME" value="playerutils" />
   </component>
   <component name="ProjectId" id="1mvSGeXIcMUbghLuxLuU2y2RGeb" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -61,7 +68,7 @@
       <option name="presentableId" value="Default" />
       <updated>1610372477006</updated>
       <workItem from="1610372479108" duration="2402000" />
-      <workItem from="1610376802655" duration="29000" />
+      <workItem from="1610376802655" duration="104000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;second commit&quot;">
       <created>1610373439054</created>
@@ -105,11 +112,29 @@
       <option name="project" value="LOCAL" />
       <updated>1610374095642</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="&quot;second commit&quot;">
+      <created>1610376846322</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1610376846323</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
