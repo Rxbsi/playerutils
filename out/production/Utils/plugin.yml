@@ -1,0 +1,20 @@
+name: UtilsUndPlayerUtils
+version: 1.0
+main: de.xenon.playerutils.Plugin
+api-version: 1.13
+
+commands:
+  utils:
+  workbench:
+  chatevents:
+  daytime:
+  whitelistgui:
+  whitelistguiplayers:
+  health:
+  gm:
+  bannkick:
+  invsee:
+  vanish:
+  fly:
+  teleportutil:
+  troll:
