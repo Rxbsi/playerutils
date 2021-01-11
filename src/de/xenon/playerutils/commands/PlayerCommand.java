@@ -17,7 +17,7 @@ public class PlayerCommand implements CommandExecutor {
         final Player player = (Player) sender;
 
         if (player.hasPermission("playerutils.player") || player.hasPermission("playerutils.*")) {
-            player.sendMessage(Plugin.PREFIX + "Nigger");
+            player.sendMessage(Plugin.PREFIX + "Klappt");
         }
 
         return false;
