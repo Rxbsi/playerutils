@@ -6,7 +6,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class PlayerCommand implements CommandExecutor {
+public class UtilsCommand implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
@@ -16,9 +16,10 @@ public class PlayerCommand implements CommandExecutor {
 
         final Player player = (Player) sender;
 
-        if (player.hasPermission("playerutils.player") || player.hasPermission("playerutils.*")) {
-            player.sendMessage(Plugin.PREFIX + "Klappt");
-            player.sendMessage("Ein weiteres mal!");
+        if (player.hasPermission("utils.gui") || player.hasPermission("utils.*")) {
+            if (args.length == 0) {
+                player.sendMessage(Plugin.PREFIX + "§eKlappt 1a");
+            }
         }
 
         return false;

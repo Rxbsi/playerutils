@@ -1,0 +1,7 @@
+name: Utils
+version: 1.0
+main: de.xenon.playerutils.Plugin
+author: Rxbsi, Verronix
+
+commands:
+  utils:

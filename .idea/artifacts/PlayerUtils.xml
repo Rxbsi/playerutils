@@ -2,7 +2,7 @@
   <artifact type="jar" name="PlayerUtils">
     <output-path>$PROJECT_DIR$/../../../Server 1.16.4/plugins</output-path>
     <root id="archive" name="PlayerUtils.jar">
-      <element id="module-output" name="PlayerUtils" />
+      <element id="module-output" name="Utils" />
     </root>
   </artifact>
 </component>

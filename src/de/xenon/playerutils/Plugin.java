@@ -1,6 +1,6 @@
 package de.xenon.playerutils;
 
-import de.xenon.playerutils.commands.PlayerCommand;
+import de.xenon.playerutils.commands.UtilsCommand;
 import de.xenon.playerutils.listener.InventoryClickListener;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -20,7 +20,7 @@ public class Plugin extends JavaPlugin {
     }
 
     private void registerCommand() {
-        this.getCommand("player").setExecutor(new PlayerCommand());
+        this.getCommand("player").setExecutor(new UtilsCommand());
     }
 
     private void registerListener() {
