@@ -18,7 +18,7 @@ public class UtilsCommand implements CommandExecutor {
 
         if (player.hasPermission("utils.gui") || player.hasPermission("utils.*")) {
             if (args.length == 0) {
-                player.sendMessage(Plugin.PREFIX + "§eKlappt 1a");
+                player.sendMessage(Plugin.PREFIX + "§eKlappt 1a und b");
             }
         }
 
