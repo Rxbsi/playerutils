@@ -1,5 +1,7 @@
 package de.xenon.playerutils.commands;
 
+
+import de.xenon.playerutils.Plugin;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -17,6 +19,7 @@ public class ChatClearCommand implements CommandExecutor {
                 for(int i = 0; i < 250; i++) {
                     Bukkit.broadcastMessage("");
                 }
+                Bukkit.broadcastMessage(Plugin.PREFIX + "§7Der Chat wurde von §e" + player.getDisplayName() + " §7geleert.");
             }
         }
         return false;

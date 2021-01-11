@@ -7,6 +7,8 @@ commands:
   utils:
   workbench:
   chatevents:
+  cc:
+  cl:
   daytime:
   whitelistgui:
   whitelistguiplayers:
