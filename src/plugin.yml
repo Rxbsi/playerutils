@@ -5,3 +5,6 @@ author: Rxbsi, Verronix
 
 commands:
   utils:
+  whitelistgui:
+  daytime:
+  chatevent:
