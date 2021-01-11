@@ -17,6 +17,8 @@ import java.util.List;
 
 public class UtilsCommand implements CommandExecutor {
 
+    public static Inventory worldInventory;
+
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 
@@ -27,7 +29,7 @@ public class UtilsCommand implements CommandExecutor {
 
         if (player.hasPermission("utils.gui") || player.hasPermission("utils.*")) {
             if (args.length == 0) {
-                Inventory worldInventory = Bukkit.createInventory(player, 9, "§eWorld§7-§eSettings");
+                worldInventory = Bukkit.createInventory(player, 9, "§eWorld§7-§eSettings");
 
                 ItemStack workbench = new ItemStack(Material.CRAFTING_TABLE);
                 ItemMeta workbenchMeta = workbench.getItemMeta();
