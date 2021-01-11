@@ -5,6 +5,15 @@ author: Rxbsi, Verronix
 
 commands:
   utils:
-  whitelistgui:
+  workbench:
+  chatevents:
   daytime:
-  chatevent:
+  whitelistgui:
+  health:
+  gm:
+  bannkick:
+  invsee:
+  vanish:
+  fly:
+  teleportutil:
+  troll:
