@@ -1,7 +1,7 @@
-name: Utils
+name: UtilsUndPlayerUtils
 version: 1.0
 main: de.xenon.playerutils.Plugin
-author: Rxbsi, Verronix
+api-version: 1.13
 
 commands:
   utils:

@@ -88,7 +88,7 @@ public class UtilsCommand implements CommandExecutor {
                     List<String> skullLore = new ArrayList<String>();
                     skullLore.add("§eGame§7§eMode: " + target.getGameMode());
                     skullLore.add("§eOperator: " + target.isOp());
-                    skullLore.add("§eKoordinaten: §7X: §8" + target.getLocation().getX() + "§7Y: §8" + target.getLocation().getY() + "§7Z: §8" + target.getLocation().getZ());
+                    skullLore.add("§eKoordinaten: §7X: §8" + (int) target.getLocation().getX() + " §7Y: §8" + (int) target.getLocation().getY() + " §7Z: §8" + (int) target.getLocation().getZ());
                     skullLore.add("§eIP-Adresse: " + target.getAddress());
                     skullMeta.setLore(skullLore);
                     skull.setItemMeta(skullMeta);
