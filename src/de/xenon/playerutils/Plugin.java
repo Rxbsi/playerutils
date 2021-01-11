@@ -20,7 +20,7 @@ public class Plugin extends JavaPlugin {
     }
 
     private void registerCommand() {
-        this.getCommand("player").setExecutor(new UtilsCommand());
+        this.getCommand("utils").setExecutor(new UtilsCommand());
     }
 
     private void registerListener() {
