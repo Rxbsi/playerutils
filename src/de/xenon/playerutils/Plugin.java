@@ -30,6 +30,7 @@ public class Plugin extends JavaPlugin {
         this.getCommand("cl").setExecutor(new ChatlockCommand());
         this.getCommand("clgui").setExecutor(new ChatlockGuiCommand());
         this.getCommand("daytimegui").setExecutor(new DaytimeGuiCommand());
+        this.getCommand("tpgui").setExecutor(new TeleportGuiCommand());
     }
 
     private void registerListener() {

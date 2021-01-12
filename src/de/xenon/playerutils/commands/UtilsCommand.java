@@ -19,6 +19,8 @@ public class UtilsCommand implements CommandExecutor {
 
     public static Inventory worldInventory;
 
+    public static Player target;
+
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 
@@ -80,7 +82,7 @@ public class UtilsCommand implements CommandExecutor {
                 player.openInventory(worldInventory);
 
             } else if (args.length == 1) {
-                final Player target = Bukkit.getPlayerExact(args[0]);
+                target = Bukkit.getPlayerExact(args[0]);
                 if (target != null) {
                     Inventory playerInventory = Bukkit.createInventory(player, 27, target.getDisplayName());
 
