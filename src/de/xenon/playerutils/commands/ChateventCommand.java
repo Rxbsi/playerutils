@@ -20,13 +20,13 @@ public class ChateventCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 
-        if(!(sender instanceof Player))
+        if (!(sender instanceof Player))
             return false;
         final Player player = (Player) sender;
 
-        if(player.hasPermission("utils.chatevent") || player.hasPermission("utils.*")) {
-            if(args.length == 0) {
-                 chatINV = Bukkit.createInventory(player, 9, "§6Chat§7-§6Events");
+        if (player.hasPermission("utils.chatevent") || player.hasPermission("utils.*")) {
+            if (args.length == 0) {
+                chatINV = Bukkit.createInventory(player, 9, "§6Chat§7-§6Events");
 
                 ItemStack cc = new ItemStack(Material.FIRE_CHARGE);
                 ItemMeta ccMeta = cc.getItemMeta();

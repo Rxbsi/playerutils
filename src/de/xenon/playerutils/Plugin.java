@@ -31,6 +31,7 @@ public class Plugin extends JavaPlugin {
         this.getCommand("clgui").setExecutor(new ChatlockGuiCommand());
         this.getCommand("daytimegui").setExecutor(new DaytimeGuiCommand());
         this.getCommand("tpgui").setExecutor(new TeleportGuiCommand());
+        this.getCommand("gm").setExecutor(new GameModeCommand());
     }
 
     private void registerListener() {

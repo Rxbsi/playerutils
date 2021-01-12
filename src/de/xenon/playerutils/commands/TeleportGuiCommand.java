@@ -18,13 +18,13 @@ public class TeleportGuiCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 
-        if(!(sender instanceof Player))
+        if (!(sender instanceof Player))
             return false;
 
         final Player player = (Player) sender;
 
-        if(player.hasPermission("utils.tp") || player.hasPermission("utils.*")) {
-            if(args.length == 0) {
+        if (player.hasPermission("utils.tp") || player.hasPermission("utils.*")) {
+            if (args.length == 0) {
                 Inventory inventory = Bukkit.createInventory(player, 9, "§6Teleport§7-§6Menu");
 
                 ItemStack cc = new ItemStack(Material.ENDER_PEARL);

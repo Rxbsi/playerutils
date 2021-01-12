@@ -13,11 +13,10 @@ public class AsyncPlayerChatListener implements Listener {
     public void onAsyncChat(AsyncPlayerChatEvent event) {
         Player player = event.getPlayer();
 
-        if(ChatlockCommand.locked) {
+        if (ChatlockCommand.locked) {
             event.setCancelled(true);
             player.sendMessage(Plugin.PREFIX + "§7Der Chat ist derzeit §cgesperrt§7.");
         }
-
 
 
     }

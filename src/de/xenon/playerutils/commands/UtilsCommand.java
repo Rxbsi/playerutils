@@ -18,6 +18,7 @@ import java.util.List;
 public class UtilsCommand implements CommandExecutor {
 
     public static Inventory worldInventory;
+    public static Inventory playerInventory;
 
     public static Player target;
 
@@ -84,7 +85,7 @@ public class UtilsCommand implements CommandExecutor {
             } else if (args.length == 1) {
                 target = Bukkit.getPlayerExact(args[0]);
                 if (target != null) {
-                    Inventory playerInventory = Bukkit.createInventory(player, 27, target.getDisplayName());
+                    playerInventory = Bukkit.createInventory(player, 27, target.getDisplayName());
 
                     ItemStack skull = new ItemStack(Material.SKELETON_SKULL);
                     ItemMeta skullMeta = skull.getItemMeta();
@@ -114,13 +115,13 @@ public class UtilsCommand implements CommandExecutor {
                     ItemMeta grassMeta = grass.getItemMeta();
                     grassMeta.setDisplayName("§bGame§7-§bMode");
                     List<String> grassLore = new ArrayList<String>();
-                    grassLore.add("§eLässt dich den Spieler heilen.");
+                    grassLore.add("§eLässt dich den Game-Mode des außgewählten Spielers setzen..");
                     grassMeta.setLore(grassLore);
                     grass.setItemMeta(grassMeta);
 
                     ItemStack xp = new ItemStack(Material.EXPERIENCE_BOTTLE);
                     ItemMeta xpMeta = xp.getItemMeta();
-                    redDyeMeta.setDisplayName("§bExperience");
+                    xpMeta.setDisplayName("§bExperience");
                     List<String> xpLore = new ArrayList<String>();
                     xpLore.add("§eLässt dich die XP des Spielers setzen.");
                     xpMeta.setLore(xpLore);

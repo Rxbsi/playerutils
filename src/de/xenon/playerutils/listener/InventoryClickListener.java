@@ -10,6 +10,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
+import org.bukkit.event.inventory.InventoryType;
 
 public class InventoryClickListener implements Listener {
 
@@ -18,7 +19,7 @@ public class InventoryClickListener implements Listener {
 
         final Player player = (Player) event.getWhoClicked();
 
-        // World-GUI
+        // WORLD-GUI
         if (event.getView().getTitle().equalsIgnoreCase("§eWorld§7-§eSettings")) {
             event.setCancelled(true);
             switch (event.getCurrentItem().getType()) {
@@ -45,7 +46,7 @@ public class InventoryClickListener implements Listener {
             }
         }
 
-        // Whitelist First GUI
+        // WHITELIST FIRST GUI
         if (event.getView().getTitle().equalsIgnoreCase("§7Manage Whitelist")) {
             event.setCancelled(true);
 
@@ -67,7 +68,7 @@ public class InventoryClickListener implements Listener {
 
         }
 
-        // Whitelist Second GUI
+        // WHITELIST SECOND GUI
         if (event.getView().getTitle().equalsIgnoreCase("§7Whitelisted Players")) {
             event.setCancelled(true);
             switch (event.getCurrentItem().getType()) {
@@ -82,7 +83,7 @@ public class InventoryClickListener implements Listener {
             }
         }
 
-        // Player-GUI
+        // PLAYER-GUI
         for (Player all : Bukkit.getOnlinePlayers()) {
             if (event.getView().getTitle().equalsIgnoreCase(all.getDisplayName())) {
                 event.setCancelled(true);
@@ -92,7 +93,7 @@ public class InventoryClickListener implements Listener {
                         player.performCommand("health " + event.getView().getTitle());
                         break;
 
-                    case GRASS:
+                    case GRASS_BLOCK:
                         player.performCommand("gm " + event.getView().getTitle());
                         break;
 
@@ -113,7 +114,7 @@ public class InventoryClickListener implements Listener {
                         break;
 
                     case ENDER_PEARL:
-                        player.performCommand("teleportutil " + event.getView().getTitle());
+                        player.performCommand("tpgui");
                         break;
 
                     case TNT:
@@ -128,7 +129,7 @@ public class InventoryClickListener implements Listener {
         }
 
         // CHAT-EVENT GUI
-        if(event.getView().getTitle().equalsIgnoreCase("§6Chat§7-§6Events")) {
+        if (event.getView().getTitle().equalsIgnoreCase("§6Chat§7-§6Events")) {
             event.setCancelled(true);
             switch (event.getCurrentItem().getType()) {
                 case FIRE_CHARGE:
@@ -145,7 +146,7 @@ public class InventoryClickListener implements Listener {
         }
 
         // CHAT-LOCK GUI
-        if(event.getView().getTitle().equalsIgnoreCase("§6Chat§7-§6Lock")) {
+        if (event.getView().getTitle().equalsIgnoreCase("§6Chat§7-§6Lock")) {
             event.setCancelled(true);
             switch (event.getCurrentItem().getType()) {
                 case EMERALD_BLOCK:
@@ -162,7 +163,7 @@ public class InventoryClickListener implements Listener {
         }
 
         // TIME GUI
-        if(event.getView().getTitle().equalsIgnoreCase("§6Time§7-§6Managment")) {
+        if (event.getView().getTitle().equalsIgnoreCase("§6Time§7-§6Managment")) {
             event.setCancelled(true);
             switch (event.getCurrentItem().getType()) {
                 case SUNFLOWER:
@@ -179,11 +180,11 @@ public class InventoryClickListener implements Listener {
         }
 
         // TELEPORT GUI
-        if(event.getView().getTitle().equalsIgnoreCase("§6Teleport§7-§6Menu")) {
+        if (event.getView().getTitle().equalsIgnoreCase("§6Teleport§7-§6Menu")) {
             event.setCancelled(true);
-            switch (event.getCurrentItem().getType()){
+            switch (event.getCurrentItem().getType()) {
                 case ENDER_PEARL:
-                    TeleportUtil.teleportPlayer(player,UtilsCommand.target);
+                    TeleportUtil.teleportPlayer(player, UtilsCommand.target);
                     break;
                 case ENDER_EYE:
                     TeleportUtil.teleportPlayer(UtilsCommand.target, player);
@@ -191,6 +192,36 @@ public class InventoryClickListener implements Listener {
                 case IRON_DOOR:
                     player.closeInventory();
                     player.openInventory(UtilsCommand.worldInventory);
+                    break;
+            }
+        }
+
+        // GAMEMODE-GUI
+        if (event.getView().getTitle().equalsIgnoreCase(event.getView().getTitle()) && event.getView().getType().equals(InventoryType.BREWING)) {
+            event.setCancelled(true);
+            switch (event.getCurrentItem().getType()) {
+                case GHAST_TEAR:
+                    player.performCommand("gamemode spectator " + event.getView().getTitle());
+                    player.sendMessage(Plugin.PREFIX + "§aDer Spieler §e" + event.getView().getTitle() + " §aist nun im GameMode §eSpectator");
+                    player.closeInventory();
+                    break;
+
+                case CRAFTING_TABLE:
+                    player.performCommand("gamemode survival " + event.getView().getTitle());
+                    player.sendMessage(Plugin.PREFIX + "§aDer Spieler §e" + event.getView().getTitle() + " §aist nun im GameMode §eSurvival");
+                    player.closeInventory();
+                    break;
+
+                case GRASS_BLOCK:
+                    player.performCommand("gamemode creative " + event.getView().getTitle());
+                    player.sendMessage(Plugin.PREFIX + "§aDer Spieler §e" + event.getView().getTitle() + " §aist nun im GameMode §eCreative");
+                    player.closeInventory();
+                    break;
+
+                case IRON_SWORD:
+                    player.performCommand("gamemode adventure " + event.getView().getTitle());
+                    player.sendMessage(Plugin.PREFIX + "§aDer Spieler §e" + event.getView().getTitle() + " §aist nun im GameMode §eAdventure");
+                    player.closeInventory();
                     break;
             }
         }

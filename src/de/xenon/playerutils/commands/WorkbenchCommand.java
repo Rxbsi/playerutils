@@ -11,13 +11,13 @@ public class WorkbenchCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 
-        if(!(sender instanceof Player))
+        if (!(sender instanceof Player))
             return false;
 
         final Player player = (Player) sender;
 
-        if(player.hasPermission("utils.wb") || player.hasPermission("utils.*")) {
-            if(args.length == 0) {
+        if (player.hasPermission("utils.wb") || player.hasPermission("utils.*")) {
+            if (args.length == 0) {
                 player.openWorkbench(player.getLocation(), true);
             }
         }
