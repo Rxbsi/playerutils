@@ -97,6 +97,10 @@ public class InventoryClickListener implements Listener {
                         player.performCommand("gm " + event.getView().getTitle());
                         break;
 
+                    case EXPERIENCE_BOTTLE:
+                        player.performCommand("setxp " + event.getView().getTitle());
+                        break;
+
                     case BARRIER:
                         player.performCommand("bannkick " + event.getView().getTitle());
                         break;

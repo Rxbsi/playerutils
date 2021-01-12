@@ -16,8 +16,8 @@ public class Plugin extends JavaPlugin {
         plugin = this;
         Bukkit.getConsoleSender().sendMessage(PREFIX + "§aPlugin aktiviert!");
 
-        registerCommand();
-        registerListener();
+        this.registerCommand();
+        this.registerListener();
     }
 
     private void registerCommand() {
@@ -32,6 +32,7 @@ public class Plugin extends JavaPlugin {
         this.getCommand("daytimegui").setExecutor(new DaytimeGuiCommand());
         this.getCommand("tpgui").setExecutor(new TeleportGuiCommand());
         this.getCommand("gm").setExecutor(new GameModeCommand());
+        this.getCommand("setxp").setExecutor(new SetXPCommand());
     }
 
     private void registerListener() {

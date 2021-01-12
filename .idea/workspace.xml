@@ -6,30 +6,12 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1bbdcf2-8e54-44b1-b507-8bd1d6f48c72" name="Default Changelist" comment="&quot;second commit&quot;">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/PlayerUtils.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/spigot.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/xenon/playerutils/commands/GameModeCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/PlayerUtils1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/spigot_1_16_3.xml" beforeDir="false" />
+    <list default="true" id="e1bbdcf2-8e54-44b1-b507-8bd1d6f48c72" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/de/xenon/playerutils/commands/SetXPCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utils.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Utils.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Utils/de/xenon/playerutils/Plugin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Utils/de/xenon/playerutils/Plugin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Utils/de/xenon/playerutils/commands/UtilsCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Utils/de/xenon/playerutils/commands/UtilsCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Utils/de/xenon/playerutils/listener/AsyncPlayerChatListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Utils/de/xenon/playerutils/listener/AsyncPlayerChatListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Utils/de/xenon/playerutils/listener/InventoryClickListener$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Utils/de/xenon/playerutils/listener/InventoryClickListener$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Utils/de/xenon/playerutils/listener/InventoryClickListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Utils/de/xenon/playerutils/listener/InventoryClickListener.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/de/xenon/playerutils/Plugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/xenon/playerutils/Plugin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/de/xenon/playerutils/commands/ChatClearCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/xenon/playerutils/commands/ChatClearCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/de/xenon/playerutils/commands/ChateventCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/xenon/playerutils/commands/ChateventCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/de/xenon/playerutils/commands/ChatlockCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/xenon/playerutils/commands/ChatlockCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/de/xenon/playerutils/commands/ChatlockGuiCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/xenon/playerutils/commands/ChatlockGuiCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/de/xenon/playerutils/commands/TeleportGuiCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/xenon/playerutils/commands/TeleportGuiCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/de/xenon/playerutils/commands/UtilsCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/xenon/playerutils/commands/UtilsCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/de/xenon/playerutils/commands/WorkbenchCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/xenon/playerutils/commands/WorkbenchCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/de/xenon/playerutils/listener/AsyncPlayerChatListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/xenon/playerutils/listener/AsyncPlayerChatListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/de/xenon/playerutils/listener/InventoryClickListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/xenon/playerutils/listener/InventoryClickListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/de/xenon/playerutils/utils/TeleportUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/xenon/playerutils/utils/TeleportUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/plugin.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,13 +64,15 @@
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -120,6 +104,7 @@
       <workItem from="1610372479108" duration="2402000" />
       <workItem from="1610380227300" duration="6748000" />
       <workItem from="1610401000055" duration="2370000" />
+      <workItem from="1610469305581" duration="855000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;second commit&quot;">
       <created>1610373439054</created>
@@ -240,7 +225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610390003807</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="&quot;GameMode wurde hinzugeuegt + Teleport fixed&quot;">
+      <created>1610459482705</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1610459482705</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,6 +253,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="&quot;second commit&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;second commit&quot;" />
+    <MESSAGE value="&quot;GameMode wurde hinzugeuegt + Teleport fixed&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;GameMode wurde hinzugeuegt + Teleport fixed&quot;" />
   </component>
 </project>
