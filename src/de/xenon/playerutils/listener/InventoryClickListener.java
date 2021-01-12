@@ -4,6 +4,7 @@ import com.sun.istack.internal.NotNull;
 import de.xenon.playerutils.Plugin;
 import de.xenon.playerutils.commands.ChateventCommand;
 import de.xenon.playerutils.commands.UtilsCommand;
+import de.xenon.playerutils.utils.TeleportUtil;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -169,6 +170,23 @@ public class InventoryClickListener implements Listener {
                     break;
                 case CAMPFIRE:
                     player.performCommand("time set night");
+                    break;
+                case IRON_DOOR:
+                    player.closeInventory();
+                    player.openInventory(UtilsCommand.worldInventory);
+                    break;
+            }
+        }
+
+        // TELEPORT GUI
+        if(event.getView().getTitle().equalsIgnoreCase("§6Teleport§7-§6Menu")) {
+            event.setCancelled(true);
+            switch (event.getCurrentItem().getType()){
+                case ENDER_PEARL:
+                    TeleportUtil.teleportPlayer(player,UtilsCommand.target);
+                    break;
+                case ENDER_EYE:
+                    TeleportUtil.teleportPlayer(UtilsCommand.target, player);
                     break;
                 case IRON_DOOR:
                     player.closeInventory();
